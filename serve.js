@@ -22,7 +22,7 @@ const mongoURI2="mongodb://localhost:27017/files"
 const Users=require("./route/User.js")
 
 app.use('/users',Users)
-app.post('/',(req,res)=>{
+app.get('/',(req,res)=>{
 
 res.send("hello")
 
