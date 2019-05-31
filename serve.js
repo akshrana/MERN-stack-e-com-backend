@@ -31,5 +31,5 @@ mongoose.connect(mongoURI,{useNewUrlParser:true})
 .then(()=>{console.log("mongodb conected") })
 .catch(err => console.log(err));
 
- app.listen(process.env.port||3001);
+ app.listen(process.env.PORT||3001);
  
