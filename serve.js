@@ -21,12 +21,8 @@ const mongoURI="mongodb+srv://user:akshaksh123@cluster0-e6suv.mongodb.net/test?r
 const mongoURI2="mongodb://localhost:27017/files"
 const Users=require("./route/User.js")
 
-app.use('/users',Users)
-app.get('/',(req,res)=>{
+app.use('/',Users)
 
-res.send("hello")
-
-})
 mongoose.connect(mongoURI,{useNewUrlParser:true})
 .then(()=>{console.log("mongodb conected") })
 .catch(err => console.log(err));
