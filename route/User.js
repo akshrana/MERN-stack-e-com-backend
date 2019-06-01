@@ -8,6 +8,8 @@ const path =require("path")
 const User=require("../models/User")
 const Admin=require("../models/Admin")
 users.use(cors());
+
+users.use(express.static("photos"));	
 process.env.SECRET_KEY='secret'
 
 
@@ -18,11 +20,11 @@ users.post('/sub',(req,res)=>{
 	var photname="";
 	var i=0;
 const storage1=multer.diskStorage(
-{destination:"./public/upload/",
+{destination:"./photos",
  filename:function(req,file,cb){
     
     photname=file.fieldname+'-'+Date.now()+path.extname(file.originalname)+i;
-    phoname.push('/nodex/public/upload'+photname);
+    phoname.push('https://git.heroku.com/secret-badlands-38102.git/'+photname);
  	cb(null,photname)
  	 console.log("hello")
  	i++;
