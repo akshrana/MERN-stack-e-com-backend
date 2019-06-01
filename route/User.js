@@ -22,7 +22,7 @@ const storage1=multer.diskStorage(
  filename:function(req,file,cb){
     
     photname=file.fieldname+'-'+Date.now()+path.extname(file.originalname)+i;
-    phoname.push(photname);
+    phoname.push('/nodex/public/upload'+photname);
  	cb(null,photname)
  	 console.log("hello")
  	i++;
