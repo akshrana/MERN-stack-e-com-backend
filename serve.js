@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded(
 	))
 
 
-	
+app.use(express.static("client/build"));	
 
 const mongoURI="mongodb+srv://user:akshaksh123@cluster0-e6suv.mongodb.net/test?retryWrites=true&w=majority"
 const mongoURI2="mongodb://localhost:27017/files"
