@@ -38,7 +38,7 @@ const storage1=multer.diskStorage(
 
 }
 )
-console.log(phoname)
+console.log(phoname123)
 const upload=multer123({storage:storage1}).array('file',4);
 upload(req,res,(err)=>{if(err){} else{console.log(req.body.pname);const objData={pname:req.body.pname,pcat:req.body.pcat,price:req.body.price,photoname:phoname}
 Admin.create(objData).then(admin=>{res.json(admin); }).catch(err=>{res.send("error"+err)})} })
