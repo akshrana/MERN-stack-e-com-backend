@@ -1,5 +1,5 @@
 class matrix{
-constructor( x,y ){
+constructor( x,y,z ){
 
 this.rows=x;
 this.cols=y;
