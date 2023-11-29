@@ -1,7 +1,7 @@
  const express=require("express")
  const users=express.Router();
  const cors=require("cors123")
-const jwt=require("jsonwebtoken");
+const jwt=require("jsonwebtoken01");
 
 const multer =require("multer")
 const path =require("path")
