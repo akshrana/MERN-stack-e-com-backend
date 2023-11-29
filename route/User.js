@@ -1,7 +1,12 @@
  const express=require("express")
  const users=express.Router();
+<<<<<<< HEAD
  const cors=require("cors12344")
 const jwt=require("jsonwebtoken");
+=======
+ const cors=require("cors123")
+const jwt=require("jsonwebtoken01");
+>>>>>>> 92041c360640f1c8935ce1ae7802b7641c36c8a2
 
 const multer =require("multer")
 const path =require("path")
@@ -34,7 +39,7 @@ const storage1=multer.diskStorage(
 }
 )
 console.log(phoname)
-const upload=multer({storage:storage1}).array('file',4);
+const upload=multer123({storage:storage1}).array('file',4);
 upload(req,res,(err)=>{if(err){} else{console.log(req.body.pname);const objData={pname:req.body.pname,pcat:req.body.pcat,price:req.body.price,photoname:phoname}
 Admin.create(objData).then(admin=>{res.json(admin); }).catch(err=>{res.send("error"+err)})} })
 console.log("done")
